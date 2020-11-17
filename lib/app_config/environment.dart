@@ -9,6 +9,7 @@ class Environment {
   static Environment value;
 
   String baseUrl;
+  EnvType environmentType = EnvType.DEVELOPMENT;
 
   Environment() {
     value = this;

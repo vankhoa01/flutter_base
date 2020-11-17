@@ -30,6 +30,7 @@ class HomeController extends GetxController {
   /// When the controller is initialized, make the http request
   @override
   Future<void> onInit() async {
+    super.onInit();
     casesBox = await hiveDatabase.openCasesBox();
     fetchDataFromApi();
   }
@@ -39,7 +40,7 @@ class HomeController extends GetxController {
     /// When the repository returns the value, change the status to success,
     /// and fill in "cases"
     if(await ConnectionUtils.isNetworkConnected()) {
-      return homeRepository.getCases().then(
+        return homeRepository.getCases().then(
             (data) async {
           casesBox.put(HiveDatabase.CASES_BOX, data);
           cases(casesBox.get(HiveDatabase.CASES_BOX) as CasesModel);

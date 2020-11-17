@@ -1,21 +1,16 @@
-import 'package:dio/dio.dart';
-import '../../../app_config/constants.dart';
-import '../../../app_config/environment.dart';
-
+import '../../../shared/api_client/api_client.dart';
 import '../domain/adapters/repository_adapter.dart';
 import '../domain/entity/cases_model.dart';
 
 class HomeRepository implements IHomeRepository {
-  HomeRepository({this.dio});
+  HomeRepository({this.apiClient});
 
-  final Dio dio;
+  final ApiClient apiClient;
 
   @override
   Future<CasesModel> getCases() async {
     try {
-      final response = await dio.get(
-          Environment.value.baseUrl + Constants.SUMMARY
-      );
+      final response = await apiClient.get(ApiClient.SUMMARY);
       return CasesModel.fromJson(response.data as Map<String, dynamic>);
     } on Exception catch (e) {
       print(e.toString());

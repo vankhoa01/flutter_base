@@ -12,10 +12,11 @@ class HomeBinding extends Bindings {
   void dependencies() {
     Get.lazyPut(() => ApiClient(Dio()));
     Get.lazyPut(() => HiveDatabase());
-    Get.lazyPut<IHomeRepository>(() => HomeRepository(apiClient: Get.find()));
-    Get.lazyPut(() => HomeController(
-        homeRepository: Get.find(),
+    Get.lazyPut<IHomeRepository>(() => HomeRepository(
+        apiClient: Get.find(),
         hiveDatabase: Get.find())
+    );
+    Get.lazyPut(() => HomeController(homeRepository: Get.find())
     );
   }
 }

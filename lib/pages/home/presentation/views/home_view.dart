@@ -2,12 +2,16 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_demo/shared/languages/localization.dart';
 
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
+
+    final labels = AppLocalizations.of(context);
+
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -21,7 +25,7 @@ class HomeView extends GetView<HomeController> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text(controller.labels.app.title),
+          title: Text(labels.app.title),
           backgroundColor: Colors.white10,
           elevation: 0,
           centerTitle: true,

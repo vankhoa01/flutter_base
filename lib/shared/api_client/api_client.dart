@@ -23,7 +23,7 @@ class ApiClient {
         requestHeader: true,
         requestBody: true,
         responseHeader: true,
-        responseBody: true,
+        responseBody: false,
         error: true,
         compact: true,
       ));

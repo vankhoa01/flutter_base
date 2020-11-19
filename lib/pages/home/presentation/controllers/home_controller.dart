@@ -10,7 +10,7 @@ import '../../domain/entity/cases_model.dart';
 enum Status { loading, success, error }
 
 class HomeController extends GetxController {
-  HomeController({this.homeRepository, this.hiveDatabase});
+  HomeController({this.homeRepository});
 
   /// inject repo abstraction dependency
   final IHomeRepository homeRepository;
@@ -21,42 +21,19 @@ class HomeController extends GetxController {
   /// create a reactive CasesModel. CasesModel().obs has same result
   final cases = Rx<CasesModel>();
 
-  final HiveDatabase hiveDatabase;
-
-  Box casesBox;
-
-  final AppLocalizations_Labels labels = AppLocalizations.of(Get.context);
-
   /// When the controller is initialized, make the http request
   @override
   Future<void> onInit() async {
     super.onInit();
-    casesBox = await hiveDatabase.openCasesBox();
-    fetchDataFromApi();
-  }
-
-  /// fetch cases from Api
-  Future<void> fetchDataFromApi() async {
-    /// When the repository returns the value, change the status to success,
-    /// and fill in "cases"
-    if(await ConnectionUtils.isNetworkConnected()) {
-        return homeRepository.getCases().then(
+    homeRepository.getCases().then(
             (data) async {
-          casesBox.put(HiveDatabase.CASES_BOX, data);
-          cases(casesBox.get(HiveDatabase.CASES_BOX) as CasesModel);
+          cases(data);
           status(Status.success);
         },
-
-        /// In case of error, print the error and change the status
-        /// to Status.error
-        onError: (err) {
-          print("$err");
-          return status(Status.error);
-        },
-      );
-    } else {
-      cases(casesBox.get(HiveDatabase.CASES_BOX) as CasesModel);
-      status(Status.success);
-    }
+      onError: (err) {
+        print("$err");
+        status(Status.error);
+      },
+    );
   }
 }

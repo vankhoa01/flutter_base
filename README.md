@@ -2,6 +2,8 @@
 
 A starter kit for beginner learns with Get pattern (it's same MVC or MVVM on native pattern), RxDart, Hive, Localization and Dio to architect a flutter project. This starter kit build an Covid-19 app as a example
 
+<img src="https://i.ibb.co/rvC6NdJ/Simulator-Screen-Shot-i-Phone-X-2020-12-16-at-10-19-20.png" width="300"> <img src="https://i.ibb.co/P4gkDd2/Simulator-Screen-Shot-i-Phone-X-2020-12-16-at-10-19-25.png" width="300"> <img src="https://i.ibb.co/CWhRxgB/Simulator-Screen-Shot-i-Phone-X-2020-12-16-at-10-19-30.png" width="300">
+
 ## Feature
 - Get Pattern by [Get](https://pub.dev/packages/get)
 - Navigate pages by [Get](https://pub.dev/packages/get)
@@ -9,7 +11,7 @@ A starter kit for beginner learns with Get pattern (it's same MVC or MVVM on nat
 - Local cache by using [Hive](https://pub.dev/packages/hive)
 - Restful api call by using [Dio](https://github.com/flutterchina/dio)
 - Localization by using [flutter_sheet_localization](https://github.com/aloisdeniel/flutter_sheet_localization)
-- Environment Variable & Project Config (Like App Name, Bundle Id) based on different project flavour (Development, Staging & Production)
+- Environment Variable & Project Config (Like App Name, Bundle Id) based on different project [flavour](https://medium.com/@animeshjain/build-flavors-in-flutter-android-and-ios-with-different-firebase-projects-per-flavor-27c5c5dac10b) (Development, Staging & Production)
 - Build pojo by using [json_serializable](https://pub.dev/packages/json_serializable)
 
 ## Install

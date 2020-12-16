@@ -13,6 +13,7 @@ A starter kit for beginner learns with Get library (State Manager, Navigation Ma
 - Localization by using [flutter_sheet_localization](https://github.com/aloisdeniel/flutter_sheet_localization)
 - Environment Variable & Project Config (Like App Name, Bundle Id) based on different project [flavour](https://medium.com/@animeshjain/build-flavors-in-flutter-android-and-ios-with-different-firebase-projects-per-flavor-27c5c5dac10b) (Development, Staging & Production)
 - Build pojo by using [json_serializable](https://pub.dev/packages/json_serializable)
+- [Screen Util](https://github.com/OpenFlutter/flutter_screenutil)
 
 ## Install
 

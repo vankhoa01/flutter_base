@@ -18,22 +18,27 @@ A starter kit for beginner learns with Get pattern (it's same MVC or MVVM on nat
 2. Download [flutter version](https://flutter.dev/docs/development/tools/sdk/releases)
 
 ## Run Config
-1. Click 'Edit Configuration'
-2. Point to specs main in lib/app_config folder
+1. Run: flutter create .
+2. Click 'Edit Configuration'
+3. Point to specs main in lib/app_config folder
 
 ## Useful Command
 
 ### Run flutter_starter_kit
 
+```
+flutter create .
+```
+
 For development,
 
 ```
-flutter run --flavor development -t lib/config/main_development.dart
+flutter run -t lib/app_config/main_development.dart
 ```
 
 For staging,
 ```
-flutter run --flavor staging -t lib/config/main_staging.dart
+flutter run -t lib/app_config/main_production.dart
 ```
 
 For production,
@@ -46,6 +51,13 @@ flutter run --flavor production -t lib/config/main_production.dart
 ```
 flutter packages pub run build_runner build --delete-conflicting-outputs
 ```
+
+## Next action
+
+- Config build flavors in Android & iOS native
+- Add Fastlane for CI/CD
+- Add Sonar static code analysis
+- ......
 
 ## Getting Started
 

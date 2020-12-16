@@ -1,6 +1,6 @@
 # Flutter Starter Kit
 
-A starter kit for beginner learns with Get pattern (it's same MVC or MVVM on native pattern), RxDart, Hive, Localization and Dio to architect a flutter project. This starter kit build an Covid-19 app as a example
+A starter kit for beginner learns with Get library (State Manager, Navigation Manager and Dependencies Manager), RxDart, Hive, Localization and Dio to architect a flutter project. This starter kit build an Covid-19 app as a example
 
 <img src="https://i.ibb.co/rvC6NdJ/Simulator-Screen-Shot-i-Phone-X-2020-12-16-at-10-19-20.png" width="300"> <img src="https://i.ibb.co/P4gkDd2/Simulator-Screen-Shot-i-Phone-X-2020-12-16-at-10-19-25.png" width="300"> <img src="https://i.ibb.co/CWhRxgB/Simulator-Screen-Shot-i-Phone-X-2020-12-16-at-10-19-30.png" width="300">
 

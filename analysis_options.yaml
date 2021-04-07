@@ -5,8 +5,11 @@
 
 # include: package:effective_dart/analysis_options.1.2.0.yaml
 analyzer:
+  enable-experiment:
+    - non-nullable
   exclude:
     - "**/*.g.dart"
+    - "lib/shared/languages/*"
   strong-mode:
     implicit-casts: false
 linter:

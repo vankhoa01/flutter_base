@@ -6,9 +6,9 @@ import 'app.dart';
 enum EnvType { DEVELOPMENT, STAGING, PRODUCTION, TESTING }
 
 class Environment {
-  static Environment value;
+  static late Environment value;
 
-  String baseUrl;
+  String? baseUrl;
   EnvType environmentType = EnvType.DEVELOPMENT;
 
   Environment() {

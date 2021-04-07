@@ -7,34 +7,34 @@ part 'country.g.dart';
 @HiveType(typeId: 2)
 class Country {
   @HiveField(0)
-  final String country;
+  final String? country;
 
   @HiveField(1)
-  final String countryCode;
+  final String? countryCode;
 
   @HiveField(2)
-  final String slug;
+  final String? slug;
 
   @HiveField(3)
-  final int newConfirmed;
+  final int? newConfirmed;
 
   @HiveField(4)
-  final int totalConfirmed;
+  final int? totalConfirmed;
 
   @HiveField(5)
-  final int newDeaths;
+  final int? newDeaths;
 
   @HiveField(6)
-  final int totalDeaths;
+  final int? totalDeaths;
 
   @HiveField(7)
-  final int newRecovered;
+  final int? newRecovered;
 
   @HiveField(8)
-  final int totalRecovered;
+  final int? totalRecovered;
 
   @HiveField(9)
-  final String date;
+  final String? date;
 
   Country({
     this.country,
@@ -55,24 +55,24 @@ class Country {
   String toRawJson() => json.encode(toJson());
 
   factory Country.fromJson(Map<String, dynamic> json) => Country(
-    country: json["Country"] == null ? null : json["Country"] as String,
+    country: json["Country"] == null ? null : json["Country"] as String?,
     countryCode:
-    json["CountryCode"] == null ? null : json["CountryCode"] as String,
-    slug: json["Slug"] == null ? null : json["Slug"] as String,
+    json["CountryCode"] == null ? null : json["CountryCode"] as String?,
+    slug: json["Slug"] == null ? null : json["Slug"] as String?,
     newConfirmed:
-    json["NewConfirmed"] == null ? null : json["NewConfirmed"] as int,
+    json["NewConfirmed"] == null ? null : json["NewConfirmed"] as int?,
     totalConfirmed: json["TotalConfirmed"] == null
         ? null
-        : json["TotalConfirmed"] as int,
-    newDeaths: json["NewDeaths"] == null ? null : json["NewDeaths"] as int,
+        : json["TotalConfirmed"] as int?,
+    newDeaths: json["NewDeaths"] == null ? null : json["NewDeaths"] as int?,
     totalDeaths:
-    json["TotalDeaths"] == null ? null : json["TotalDeaths"] as int,
+    json["TotalDeaths"] == null ? null : json["TotalDeaths"] as int?,
     newRecovered:
-    json["NewRecovered"] == null ? null : json["NewRecovered"] as int,
+    json["NewRecovered"] == null ? null : json["NewRecovered"] as int?,
     totalRecovered: json["TotalRecovered"] == null
         ? null
-        : json["TotalRecovered"] as int,
-    date: json["Date"] == null ? null : json["Date"] as String,
+        : json["TotalRecovered"] as int?,
+    date: json["Date"] == null ? null : json["Date"] as String?,
   );
 
   Map<String, dynamic> toJson() => {

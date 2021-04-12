@@ -17,12 +17,12 @@ class GlobalAdapter extends TypeAdapter<Global> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Global(
-      newConfirmed: fields[0] as int,
-      totalConfirmed: fields[1] as int,
-      newDeaths: fields[2] as int,
-      totalDeaths: fields[3] as int,
-      newRecovered: fields[4] as int,
-      totalRecovered: fields[5] as int,
+      newConfirmed: fields[0] as int?,
+      totalConfirmed: fields[1] as int?,
+      newDeaths: fields[2] as int?,
+      totalDeaths: fields[3] as int?,
+      newRecovered: fields[4] as int?,
+      totalRecovered: fields[5] as int?,
     );
   }
 

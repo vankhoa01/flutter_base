@@ -17,16 +17,16 @@ class CountryAdapter extends TypeAdapter<Country> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Country(
-      country: fields[0] as String,
-      countryCode: fields[1] as String,
-      slug: fields[2] as String,
-      newConfirmed: fields[3] as int,
-      totalConfirmed: fields[4] as int,
-      newDeaths: fields[5] as int,
-      totalDeaths: fields[6] as int,
-      newRecovered: fields[7] as int,
-      totalRecovered: fields[8] as int,
-      date: fields[9] as String,
+      country: fields[0] as String?,
+      countryCode: fields[1] as String?,
+      slug: fields[2] as String?,
+      newConfirmed: fields[3] as int?,
+      totalConfirmed: fields[4] as int?,
+      newDeaths: fields[5] as int?,
+      totalDeaths: fields[6] as int?,
+      newRecovered: fields[7] as int?,
+      totalRecovered: fields[8] as int?,
+      date: fields[9] as String?,
     );
   }
 

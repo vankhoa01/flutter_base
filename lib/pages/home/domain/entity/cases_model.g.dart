@@ -17,9 +17,9 @@ class CasesModelAdapter extends TypeAdapter<CasesModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return CasesModel(
-      global: fields[0] as Global,
-      countries: (fields[1] as List)?.cast<Country>(),
-      date: fields[2] as String,
+      global: fields[0] as Global?,
+      countries: (fields[1] as List?)?.cast<Country>(),
+      date: fields[2] as String?,
     );
   }
 

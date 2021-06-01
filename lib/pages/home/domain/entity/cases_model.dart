@@ -14,13 +14,13 @@ part 'cases_model.g.dart';
 @HiveType(typeId: 1)
 class CasesModel {
   @HiveField(0)
-  final Global global;
+  final Global? global;
 
   @HiveField(1)
-  final List<Country> countries;
+  final List<Country>? countries;
 
   @HiveField(2)
-  final String date;
+  final String? date;
 
   CasesModel({
     this.global,
@@ -43,14 +43,14 @@ class CasesModel {
                 (json["Countries"] as List<dynamic>)
                     .map((x) => Country.fromJson(x as Map<String, dynamic>)),
               ),
-        date: json["Date"] == null ? null : json["Date"] as String,
+        date: json["Date"] == null ? null : json["Date"] as String?,
       );
 
   Map<String, dynamic> toJson() => {
-        "Global": global == null ? null : global.toJson(),
+        "Global": global == null ? null : global!.toJson(),
         "Countries": countries == null
             ? null
-            : List<dynamic>.from(countries.map((x) => x.toJson())),
+            : List<dynamic>.from(countries!.map((x) => x.toJson())),
         "Date": date == null ? null : date,
       };
 }

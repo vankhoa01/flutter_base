@@ -10,9 +10,9 @@ import '../presentation/controllers/home_controller.dart';
 class HomeBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => ApiClient(Dio()));
-    Get.lazyPut(() => HiveDatabase());
-    Get.lazyPut<IHomeRepository>(() => HomeRepository(
+    Get.lazyPut<ApiClient?>(() => ApiClient(Dio()));
+    Get.lazyPut<HiveDatabase?>(() => HiveDatabase());
+    Get.lazyPut<IHomeRepository?>(() => HomeRepository(
         apiClient: Get.find(),
         hiveDatabase: Get.find())
     );

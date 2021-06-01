@@ -7,22 +7,22 @@ part 'global.g.dart';
 @HiveType(typeId: 3)
 class Global {
   @HiveField(0)
-  final int newConfirmed;
+  final int? newConfirmed;
 
   @HiveField(1)
-  final int totalConfirmed;
+  final int? totalConfirmed;
 
   @HiveField(2)
-  final int newDeaths;
+  final int? newDeaths;
 
   @HiveField(3)
-  final int totalDeaths;
+  final int? totalDeaths;
 
   @HiveField(4)
-  final int newRecovered;
+  final int? newRecovered;
 
   @HiveField(5)
-  final int totalRecovered;
+  final int? totalRecovered;
 
   Global({
     this.newConfirmed,
@@ -40,18 +40,18 @@ class Global {
 
   factory Global.fromJson(Map<String, dynamic> json) => Global(
     newConfirmed:
-    json["NewConfirmed"] == null ? null : json["NewConfirmed"] as int,
+    json["NewConfirmed"] == null ? null : json["NewConfirmed"] as int?,
     totalConfirmed: json["TotalConfirmed"] == null
         ? null
-        : json["TotalConfirmed"] as int,
-    newDeaths: json["NewDeaths"] == null ? null : json["NewDeaths"] as int,
+        : json["TotalConfirmed"] as int?,
+    newDeaths: json["NewDeaths"] == null ? null : json["NewDeaths"] as int?,
     totalDeaths:
-    json["TotalDeaths"] == null ? null : json["TotalDeaths"] as int,
+    json["TotalDeaths"] == null ? null : json["TotalDeaths"] as int?,
     newRecovered:
-    json["NewRecovered"] == null ? null : json["NewRecovered"] as int,
+    json["NewRecovered"] == null ? null : json["NewRecovered"] as int?,
     totalRecovered: json["TotalRecovered"] == null
         ? null
-        : json["TotalRecovered"] as int,
+        : json["TotalRecovered"] as int?,
   );
 
   Map<String, dynamic> toJson() => {

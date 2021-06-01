@@ -2,15 +2,12 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_demo/shared/languages/localization.dart';
 
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
-
-    final labels = AppLocalizations.of(context);
 
     return Container(
       decoration: BoxDecoration(
@@ -25,7 +22,7 @@ class HomeView extends GetView<HomeController> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text(labels.app.title),
+          title: Text('Corona Tracking'),
           backgroundColor: Colors.white10,
           elevation: 0,
           centerTitle: true,
@@ -43,31 +40,32 @@ class HomeView extends GetView<HomeController> {
                     height: 100,
                   ),
                   Text(
-                    "Total Confirmed",
+                    'total_confirmed'.tr,
                     style: TextStyle(
                       fontSize: 30,
                     ),
                   ),
                   Text(
-                    '${controller.cases.value.global.totalConfirmed}',
+                    '${controller.cases.value.global!.totalConfirmed}',
                     style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Total Deaths",
+                    'total_deaths'.tr,
                     style: TextStyle(
                       fontSize: 30,
                     ),
                   ),
                   Text(
-                    '${controller.cases.value.global.totalDeaths}',
+                    '${controller.cases.value.global!.totalDeaths}',
                     style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 10,
                   ),
+                  // ignore: deprecated_member_use
                   OutlineButton(
                     borderSide: BorderSide(
                       color: Colors.deepPurple,
@@ -78,7 +76,7 @@ class HomeView extends GetView<HomeController> {
                       Get.toNamed('/country');
                     },
                     child: Text(
-                      "Fetch by country",
+                      'fetch_country'.tr,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   )

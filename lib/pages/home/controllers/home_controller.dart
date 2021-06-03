@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-import '../../domain/adapters/repository_adapter.dart';
-import '../../domain/entity/cases_model.dart';
+import '../domain/adapters/repository_adapter.dart';
+import '../domain/entity/cases_model.dart';
 
 enum Status { loading, success, error }
 

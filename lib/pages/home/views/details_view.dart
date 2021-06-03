@@ -2,7 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../domain/entity/country.dart';
+
+import '../domain/entity/country.dart';
 
 class DetailsView extends StatelessWidget {
   @override
